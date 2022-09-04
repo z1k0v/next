@@ -12,15 +12,18 @@ const Register = () => {
   const submit = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:3000/api/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-      }),
-    });
+    await fetch(
+      "https://whispering-headland-64788.herokuapp.com/api/register",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+        }),
+      }
+    );
 
     await router.push("/login");
   };
@@ -28,16 +31,16 @@ const Register = () => {
   return (
     <Layout>
       <form onSubmit={submit}>
-        <h1 className="h3 mb-3 fw-normal">Please register</h1>
+        <h1 class="h3 mb-3 fw-normal">Please register</h1>
 
-        <div className="form-floating">
+        <div class="form-floating">
           <input
             placeholder="Name"
             required
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div className="form-floating">
+        <div class="form-floating">
           <input
             type="email"
             placeholder="Email"
@@ -45,7 +48,7 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="form-floating">
+        <div class="form-floating">
           <input
             type="password"
             placeholder="Password"

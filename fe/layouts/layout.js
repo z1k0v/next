@@ -8,7 +8,7 @@ const Layout = (props) => {
   const router = useRouter();
 
   const logout = async () => {
-    await fetch("http://localhost:3001/api/logout", {
+    await fetch("https://whispering-headland-64788.herokuapp.com/api/logout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -21,24 +21,24 @@ const Layout = (props) => {
 
   if (!props.auth) {
     menu = (
-      <ul className="navbar-nav me-auto mb-2 mb-md-0">
-        <li className="nav-item">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
           <Link href="/login">
-            <a className="nav-link active">Login</a>
+            <a class="nav-link active">Login</a>
           </Link>
         </li>
-        <li className="nav-item">
+        <li class="nav-item">
           <Link href="/register">
-            <a className="nav-link active">Register</a>
+            <a class="nav-link active">Register</a>
           </Link>
         </li>
       </ul>
     );
   } else {
     menu = (
-      <ul className="navbar-nav me-auto mb-2 mb-md-0">
-        <li className="nav-item">
-          <a href="/" className="nav-link active" onClick={logout}>
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a href="/" class="nav-link active" onClick={logout}>
             Logout
           </a>
         </li>
@@ -52,23 +52,23 @@ const Layout = (props) => {
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-          crossOrigin="anonymous"
+          crossorigin="anonymous"
         />
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-          <div className="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+          <div class="container-fluid">
             <Link href="/">
-              <a className="navbar-brand">MASSYVE</a>
+              <a class="navbar-brand">MASSYVE</a>
             </Link>
             <div>
-              <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                <li className="nav-item">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
                   <Link href="/login">
-                    <a className="nav-link active">Login</a>
+                    <a class="nav-link active">Login</a>
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li class="nav-item">
                   <Link href="/register">
-                    <a className="nav-link active">Register</a>
+                    <a class="nav-link active">Register</a>
                   </Link>
                 </li>
               </ul>
@@ -76,10 +76,15 @@ const Layout = (props) => {
           </div>
         </nav>
       </Head>
-      <div className="headerlogo">
-        <Image src="/assests/massyve.png" alt="Massyve Logo" height="400" width="400" />
+      <div class="headerlogo">
+        <Image
+          src="/assests/massyve.png"
+          alt="Massyve Logo"
+          height="400"
+          width="400"
+        />
       </div>
-      <main className="form-signin w-100 m-auto">{props.children}</main>
+      <main class="form-signin w-100 m-auto">{props.children}</main>
     </>
   );
 };

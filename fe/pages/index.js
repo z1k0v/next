@@ -8,9 +8,12 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/user", {
-          credentials: "include",
-        });
+        const response = await fetch(
+          "https://whispering-headland-64788.herokuapp.com/api/user",
+          {
+            credentials: "include",
+          }
+        );
 
         const content = await response.json();
         console.log(content.response);
