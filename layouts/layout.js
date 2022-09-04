@@ -21,24 +21,24 @@ const Layout = (props) => {
 
   if (!props.auth) {
     menu = (
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
+      <ul className="navbar-nav me-auto mb-2 mb-md-0">
+        <li className="nav-item">
           <Link href="/login">
-            <a class="nav-link active">Login</a>
+            <a className="nav-link active">Login</a>
           </Link>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <Link href="/register">
-            <a class="nav-link active">Register</a>
+            <a className="nav-link active">Register</a>
           </Link>
         </li>
       </ul>
     );
   } else {
     menu = (
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a href="/" class="nav-link active" onClick={logout}>
+      <ul className="navbar-nav me-auto mb-2 mb-md-0">
+        <li className="nav-item">
+          <a href="/" className="nav-link active" onClick={logout}>
             Logout
           </a>
         </li>
@@ -54,21 +54,21 @@ const Layout = (props) => {
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossorigin="anonymous"
         />
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-          <div class="container-fluid">
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+          <div className="container-fluid">
             <Link href="/">
-              <a class="navbar-brand">MASSYVE</a>
+              <a className="navbar-brand">MASSYVE</a>
             </Link>
             <div>
-              <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
+              <ul className="navbar-nav me-auto mb-2 mb-md-0">
+                <li className="nav-item">
                   <Link href="/login">
-                    <a class="nav-link active">Login</a>
+                    <a className="nav-link active">Login</a>
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link href="/register">
-                    <a class="nav-link active">Register</a>
+                    <a className="nav-link active">Register</a>
                   </Link>
                 </li>
               </ul>
@@ -76,7 +76,7 @@ const Layout = (props) => {
           </div>
         </nav>
       </Head>
-      <div class="headerlogo">
+      <div className="headerlogo">
         <Image
           src="/assests/massyve.png"
           alt="Massyve Logo"
@@ -84,7 +84,7 @@ const Layout = (props) => {
           width="400"
         />
       </div>
-      <main class="form-signin w-100 m-auto">{props.children}</main>
+      <main className="form-signin w-100 m-auto">{props.children}</main>
     </>
   );
 };
