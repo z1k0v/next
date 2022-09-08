@@ -47,7 +47,7 @@ const Layout = (props) => {
   }
   return (
     <>
-      <Head>
+      <div>
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -75,7 +75,7 @@ const Layout = (props) => {
             </div>
           </div>
         </nav>
-      </Head>
+      </div>
       <div className="headerlogo">
         <Image
           src="/assests/massyve.png"
