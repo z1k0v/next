@@ -31,16 +31,16 @@ const Register = () => {
   return (
     <Layout>
       <form onSubmit={submit}>
-        <h1 class="h3 mb-3 fw-normal">Please register</h1>
+        <h1 className="h3 mb-3 fw-normal">Please register</h1>
 
-        <div class="form-floating">
+        <div className="form-floating">
           <input
             placeholder="Name"
             required
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div class="form-floating">
+        <div className="form-floating">
           <input
             type="email"
             placeholder="Email"
@@ -48,7 +48,7 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div class="form-floating">
+        <div className="form-floating">
           <input
             type="password"
             placeholder="Password"

@@ -29,26 +29,26 @@ const Login = () => {
   return (
     <Layout>
       <form onSubmit={submit}>
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
-        <div class="form-floating">
+        <div className="form-floating">
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             placeholder="name@example.com"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div class="form-floating">
+        <div className="form-floating">
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">
+        <button className="w-100 btn btn-lg btn-primary" type="submit">
           Sign in
         </button>
       </form>
